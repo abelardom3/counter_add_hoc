@@ -1,5 +1,17 @@
-const Counter = () => {
-    return <h1>This comp should be the button that changes the count state</h1>
+const Counter = ({ add, minus }) => {
+
+    const handleClick = (func) => {
+        func()
+    }
+
+    return (
+        <div>
+            <button onClick={() => { handleClick(add) }}>+</button>
+
+            <button onClick={() => { handleClick(minus) }}>-</button>
+
+        </div>
+    )
 }
 
 export default Counter
